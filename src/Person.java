@@ -16,10 +16,18 @@ public class Person {
         instance++;
     }
 
-    public String toString(Person argument, Person imie) {
+    public String toString(Person argument, Person person) {
         instance++;
-        if (imie != null) {
-            return "Czesc " + argument.name + " mam na imie " + imie.name + ".";
+        System.out.println("instancja: " + instance);
+
+        //WARUNKI DLA TESTU
+        boolean person_test_null = person.name != null && person.name != "";
+        boolean argument_test_null = argument.name != null && argument.name != "";
+
+        //SPRAWDZENIE CZY OSOBA POSIADA IMIE
+        //ZWRÓCENIE ODPOWIEDNIEJ WARTOSCI
+        if (person_test_null && argument_test_null) {
+            return "Czesc " + argument.name + " mam na imie " + person.name + ".";
         } else return "BRAK DANYCH";
     }
 
