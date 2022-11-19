@@ -21,8 +21,11 @@ public class Person {
         System.out.println("instancja: " + instance);
 
         //WARUNKI DLA TESTU
-        boolean person_test_null = person.name != null && person.name != "";
-        boolean argument_test_null = argument.name != null && argument.name != "";
+//        boolean person_test_null = person.name != null && person.name != "";
+//        boolean argument_test_null = argument.name != null && argument.name != "";
+
+        boolean person_test_null = !person.name.equals(null) && !person.name.equals("");
+        boolean argument_test_null = !argument.name.equals(null) && !argument.name.equals("");
 
         //SPRAWDZENIE CZY OSOBA POSIADA IMIE
         //ZWRÓCENIE ODPOWIEDNIEJ WARTOSCI
